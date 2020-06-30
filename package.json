@@ -9,7 +9,8 @@
     "webpack:server": "webpack --config webpack.server.js --watch",
     "webpack:start": "nodemon --watch build --exec node build/bundle.js",
     "build": "webpack --config webpack.client.js && webpack --config webpack.server.js",
-    "dev": "npm-run-all --parallel webpack:*"
+    "dev": "npm-run-all --parallel webpack:*",
+    "heroku-postbuild": "webpack --config webpack.client.js && webpack --config webpack.server.js"
   },
   "author": "",
   "license": "ISC",
@@ -35,5 +36,9 @@
     "webpack": "^4.43.0",
     "webpack-cli": "^3.3.12",
     "webpack-node-externals": "^1.7.2"
+  },
+  "engines": {
+    "node": "12.16.1",
+    "npm": "6.13.4"
   }
 }
