@@ -10,6 +10,7 @@
     "webpack:start": "nodemon --watch build --exec node build/bundle.js",
     "build": "webpack --config webpack.client.js && webpack --config webpack.server.js",
     "dev": "npm-run-all --parallel webpack:*",
+    "start": "npm-run-all --parallel webpack:*",
     "heroku-postbuild": "webpack --config webpack.client.js && webpack --config webpack.server.js"
   },
   "author": "",
